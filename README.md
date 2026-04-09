@@ -60,6 +60,7 @@ This is my Neovim configuration using built-in features (no plugins) for Neovim 
 | Command | Action |
 |---------|--------|
 | `gf` | Go to file under cursor |
+| `gx` | Go to url under cursor |
 | `:find <file>` | Find file (supports wildcards) |
 | `:grep! <pattern>` | Search in files |
 

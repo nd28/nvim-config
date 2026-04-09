@@ -40,11 +40,12 @@ vim.keymap.set('n', '<leader>jq', ':%!jq -e . > /dev/null<CR>', { desc = 'Valida
 
 -- Git operations
 vim.keymap.set('n', '<leader>lg', '<cmd>terminal lazygit<CR>', { desc = 'Open LazyGit' })
-vim.keymap.set('n', '<leader>gl', ':!git log --oneline -10<CR>', { desc = 'Git log' })
-vim.keymap.set('n', '<leader>ga', ':!git add ', { desc = 'Git add file' })
-vim.keymap.set('n', '<leader>gd', ':!git diff<CR>', { desc = 'Git diff' })
-vim.keymap.set('n', '<leader>gdc', ':!git diff --cached<CR>', { desc = 'Git diff staged' })
-vim.keymap.set('n', '<leader>gc', ':!git commit -m ', { desc = 'Git commit' })
+vim.keymap.set('n', '<leader>gl', ':terminal git log --oneline -10<CR>', { desc = 'Git log' })
+vim.keymap.set('n', '<leader>ga', ':terminal git add ', { desc = 'Git add file' })
+vim.keymap.set('n', '<leader>gd', ':terminal git diff<CR>', { desc = 'Git diff' })
+vim.keymap.set('n', '<leader>gdc', ':terminal git diff --cached<CR>', { desc = 'Git diff staged' })
+vim.keymap.set('n', '<leader>gc', ':terminal git commit<CR>', { desc = 'Git commit' })
+vim.keymap.set('n', '<leader>gr', ':terminal git remote -v<CR>', { desc = 'Git remote' })
 
 
 -- Git status to quickfix
