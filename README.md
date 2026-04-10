@@ -56,6 +56,14 @@ This is my Neovim configuration using built-in features (no plugins) for Neovim 
 | `zM` | Close all folds |
 | `zj` / `zk` | Navigate folds |
 
+### File Operations (netrw)
+| Keybinding | Action |
+|------------|--------|
+| `:e .` | Open file explorer |
+| `mt` | Mark folder as copy target |
+| `mc` | Copy marked folder to target |
+| `:!cp -r <src> <dest>` | Copy folder via shell command |
+
 ### Built-in Commands
 | Command | Action |
 |---------|--------|
@@ -63,6 +71,71 @@ This is my Neovim configuration using built-in features (no plugins) for Neovim 
 | `gx` | Go to url under cursor |
 | `:find <file>` | Find file (supports wildcards) |
 | `:grep! <pattern>` | Search in files |
+
+### Buffer/Window
+| Keybinding | Action |
+|------------|--------|
+| `<leader>w` | Save file |
+| `<leader>x` | Save & close buffer |
+
+### Search & Replace
+| Keybinding | Action |
+|------------|--------|
+| `/` | Search forward |
+| `?` | Search backward |
+| `n` | Next match |
+| `N` | Previous match |
+| `<leader>sr` | Search & replace (`:%s/`) |
+| `:mksession! session.vim` | Save session |
+| `:source session.vim` | Load session |
+
+### Misc
+| Keybinding | Action |
+|------------|--------|
+| `<leader>ev` | Edit config file |
+
+### Window Splits
+| Keybinding | Action |
+|------------|--------|
+| `<leader>sv` | Split vertically |
+| `<leader>sh` | Split horizontally |
+| `<leader>sc` | Close split |
+
+### Terminal
+| Keybinding | Action |
+|------------|--------|
+| `<leader>tt` | Open terminal |
+| `<Ctrl-\\>` | Toggle terminal |
+| `Esc` | Exit terminal insert mode |
+
+### Scroll
+| Keybinding | Action |
+|------------|--------|
+| `zt` | Cursor line to top |
+| `zb` | Cursor line to bottom |
+| `zz` | Cursor line to middle |
+
+### Text Objects
+| Keybinding | Action |
+|------------|--------|
+| `ci"` | Change inside quotes |
+| `ca"` | Change including quotes |
+| `ci(` | Change inside parentheses |
+| `yaw` | Yank around word |
+
+### Marks & Jumps
+| Keybinding | Action |
+|------------|--------|
+| `m<letter>` | Set mark |
+| `` `<letter>`` | Jump to mark |
+| `<Ctrl-o>` | Go back |
+| `<Ctrl-i>` | Go forward |
+
+### Macros
+| Keybinding | Action |
+|------------|--------|
+| `q<letter>` | Record macro |
+| `@<letter>` | Play macro |
 
 ## Features
 

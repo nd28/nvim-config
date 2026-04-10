@@ -30,7 +30,7 @@ vim.keymap.set('n', '<leader>fr', ':find *.', { desc = 'Find in current dir' })
 vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
   pattern = '*.json',
   callback = function()
-    vim.treesitter.start()
+    --vim.treesitter.start()
   end,
 })
 
@@ -77,3 +77,27 @@ vim.keymap.set('n', '<leader>gs', function()
   vim.fn.setqflist(items, 'r')
   vim.cmd('copen')
 end, { desc = 'Git status to quickfix' })
+
+-- Buffer/Window
+vim.keymap.set('n', '<leader>w', '<cmd>write<CR>', { desc = 'Save file' })
+vim.keymap.set('n', '<leader>x', '<cmd>write<CR><cmd>bd<CR>', { desc = 'Save & close' })
+
+-- Search & Replace
+vim.keymap.set('n', '<leader>sr', ':%s/', { desc = 'Search & replace' })
+
+-- Edit config
+vim.keymap.set('n', '<leader>ev', '<cmd>e $MYVIMRC<CR>', { desc = 'Edit config' })
+
+-- Window splits
+vim.keymap.set('n', '<leader>sv', '<cmd>split<CR>', { desc = 'Split vertical' })
+vim.keymap.set('n', '<leader>sh', '<cmd>vsplit<CR>', { desc = 'Split horizontal' })
+vim.keymap.set('n', '<leader>sc', '<cmd>close<CR>', { desc = 'Close split' })
+
+-- Terminal
+vim.keymap.set('n', '<leader>tt', '<cmd>terminal<CR>', { desc = 'Open terminal' })
+vim.keymap.set('t', '<Esc>', '<Ctrl-\\><C-n>', { desc = 'Exit terminal' })
+
+-- Scroll
+vim.keymap.set('n', 'zt', 'zt', { desc = 'Cursor to top' })
+vim.keymap.set('n', 'zb', 'zb', { desc = 'Cursor to bottom' })
+vim.keymap.set('n', 'zz', 'zz', { desc = 'Cursor to middle' })
